@@ -36,8 +36,7 @@ public class TakeManga {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-   		
-        return statuscode;
+       		return statuscode;
 	}
 	
 	public String getresult(){
