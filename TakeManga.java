@@ -2,6 +2,10 @@ package main;
 
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
@@ -36,7 +40,8 @@ public class TakeManga {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-       		return statuscode;
+   		
+        return statuscode;
 	}
 	
 	public String getresult(){
@@ -64,7 +69,7 @@ public class TakeManga {
 	}
 	public String getMangaJpgUrl(String httpresult){
 		String jpgurl = "";
-		String patternjpg = "(i0.hdslb.com/bfs/bangumi/\\w*.jpg)";
+		String patternjpg = "(i0.hdslb.com/bfs/bangumi/\\w*.jpg|.png)";
 		Pattern rjpg = Pattern.compile(patternjpg);
 		Matcher mjpg = rjpg.matcher(httpresult);
 		if (mjpg.find()) {
@@ -85,5 +90,22 @@ public class TakeManga {
             System.out.println("NO MATCH");
         }
         return manganame;
+	}
+	public void writeTxt(Manga m,String filePath){
+		File filetxt = new File(filePath);
+		String s= "";
+		try {
+			FileWriter fw = new FileWriter(filetxt, true);
+			s = "[!["+m.getMangatitle()+"](http://"+m.getMangaImgUrl()+")]("+m.getMangaUrl()+")";
+			fw.write(s);
+			fw.write(System.getProperty("line.separator"));
+			fw.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }
