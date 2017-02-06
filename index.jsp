@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>爬虫</title>
+</head>
+<body>
+
+  <form class="form-horizontal">
+    <fieldset>
+      <div id="legend" class="">
+        <legend class="">爬虫</legend>
+      </div>
+    
+
+    
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">域名</label>
+          <div class="controls">
+            <input type="text" placeholder="http://www.bilibili.tv/" class="input-xlarge">
+            <p class="help-block"></p>
+          </div>
+        </div>
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">域名二级目录</label>
+          <div class="controls">
+            <input type="text" placeholder="anime/" class="input-xlarge">
+            <p class="help-block">等价于http://www.bilibili.tv/anime</p>
+          </div>
+        </div>
+
+    
+
+    
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">域名三级目录</label>
+          <div class="controls">
+            <input type="text" placeholder="acg" class="input-xlarge">
+            <p class="help-block">等价于http://www.bilibili.tv/anime/acg</p>
+          </div>
+        </div>
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">域名四级目录</label>
+          <div class="controls">
+            <input type="text" placeholder="同上，如无则为空" class="input-xlarge">
+            <p class="help-block"></p>
+          </div>
+        </div>
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">域名尾级目录（支持正则）</label>
+          <div class="controls">
+            <input type="text" placeholder="正则表达式|目录名" class="input-xlarge">
+            <p class="help-block"></p>
+          </div>
+        </div><div class="control-group">
+
+          <!-- Select Basic -->
+          <label class="control-label">状态码选择</label>
+          <div class="controls">
+            <select class="input-xlarge">
+      <option>HTTP/1.1 100 Continue</option>
+      <option>HTTP/1.1 101 Switching Protocols</option>
+      <option>HTTP/1.1 200 OK</option>
+      <option>HTTP/1.1 201 Created</option>
+      <option>HTTP/1.1 202 Accepted</option>
+      <option>HTTP/1.1 203 Non-authoritative Information</option>
+      <option>HTTP/1.1 204 No Content</option>
+      <option>HTTP/1.1 205 Reset Content</option>
+      <option>HTTP/1.1 206 Partial Content</option>
+      <option>HTTP/1.1 300 Multiple Choices</option>
+      <option>HTTP/1.1 301 Moved Permanently</option>
+      <option>HTTP/1.1 302 Found</option>
+      <option>HTTP/1.1 303 See Other</option>
+      <option>HTTP/1.1 304 Not Modified</option>
+      <option>HTTP/1.1 305 Use Proxy</option>
+      <option>HTTP/1.1 306 Unused</option>
+      <option>HTTP/1.1 307 Temporary Redirect</option>
+      <option>HTTP/1.1 400 Bad Request</option>
+      <option>HTTP/1.1 401 Unauthorized</option>
+      <option>HTTP/1.1 402 Payment Required</option>
+      <option>HTTP/1.1 403 Forbidden</option>
+      <option>HTTP/1.1 404 Not Found</option>
+      <option>HTTP/1.1 405 Method Not Allowed</option>
+      <option>HTTP/1.1 406 Not Acceptable</option>
+      <option>HTTP/1.1 407 Proxy Authentication Required</option>
+      <option>HTTP/1.1 408 Request Timeout</option>
+      <option>HTTP/1.1 409 Conflict</option>
+      <option>HTTP/1.1 410 Gone</option>
+      <option>HTTP/1.1 411 Length Required "Content-Length"</option>
+      <option>HTTP/1.1 412 Precondition Failed</option>
+      <option>HTTP/1.1 413 Request Entity Too Large</option>
+      <option>HTTP/1.1 414 Request-url Too Long</option>
+      <option>HTTP/1.1 415 Unsupported Media Type</option>
+      <option>HTTP/1.1 417 Expectation Failed</option>
+      <option>HTTP/1.1 500 Internal Server Error</option>
+      <option>HTTP/1.1 501 Not Implemented</option>
+      <option>HTTP/1.1 502 Bad Gateway</option>
+      <option>HTTP/1.1 503 Service Unavailable</option>
+      <option>HTTP/1.1 504 Gateway Timeout</option>
+      <option>HTTP/1.1 505 HTTP Version Not Supported</option></select>
+          </div>
+
+        </div>
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">正则表达式</label>
+          <div class="controls">
+            <input type="text" placeholder="写入需要匹配的数据正则" class="input-xlarge">
+            <p class="help-block"></p>
+          </div>
+        </div>
+
+    <div class="control-group">
+
+          <!-- Textarea -->
+          <label class="control-label">响应内容</label>
+          <div class="controls">
+            <div class="textarea">
+                  <textarea type="" class=""> </textarea>
+            </div>
+          </div>
+        </div>
+
+    <div class="control-group">
+          <label class="control-label"></label>
+
+          <!-- Button -->
+          <div class="controls">
+            <button class="btn btn-success">提交</button>
+          </div>
+        </div>
+
+    </fieldset>
+  </form>
+
+</body>
+</html>
